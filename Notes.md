@@ -1330,3 +1330,65 @@ return (
 2. **Error Handling**: If the doctor is not found (i.e., `docInfo` is `null`), a "Doctor not found" message is displayed.
 
 This structure ensures your component handles both valid and invalid cases gracefully. Let me know if you have further questions or need adjustments!
+
+
+The syntax you're using `grid grid-cols-[1fr_3fr]` defines a CSS grid with two columns. The first column takes up 1 fraction of the available space, and the second column takes up 3 fractions. This is a custom grid template specification in frameworks like **Tailwind CSS**.
+
+### Explanation:
+- `grid`: Defines the container as a grid.
+- `grid-cols-[1fr_3fr]`: Defines two columns. 
+  - The first column takes `1fr` (1 fraction of the space).
+  - The second column takes `3fr` (3 fractions of the space), meaning it will be three times as wide as the first.
+
+This effectively creates a 1:3 column layout.
+
+If you're using **Tailwind CSS**, ensure your project supports custom grid templates (as specified within square brackets). If you're manually writing CSS:
+
+### Equivalent in CSS:
+```css
+display: grid;
+grid-template-columns: 1fr 3fr;
+``` 
+
+This will have the same effect as your `grid-cols-[1fr_3fr]`.
+
+
+In **Tailwind CSS**, `text-base` is a utility class that sets the font size to the **base** size defined in your configuration.
+
+### Default Meaning of `text-base`:
+- By default, `text-base` sets the font size to **16px** (1rem). This is typically the browser's default font size.
+  
+### Usage Example:
+```html
+<p class="text-base">
+  This is a paragraph with base (16px) font size.
+</p>
+```
+
+If you're using a custom configuration in Tailwind, the base size could be different. You can adjust it in the `tailwind.config.js` file under the `theme.fontSize` section.
+
+
+In **Tailwind CSS**, `flex-1` is a utility class that makes an element **flexible** within a flex container by setting the `flex` property to `1`. 
+
+### What it Does:
+`flex-1` applies this CSS:
+```css
+flex: 1 1 0%;
+```
+
+- **flex-grow: 1**: The element will grow to fill available space.
+- **flex-shrink: 1**: The element will shrink if needed to avoid overflow.
+- **flex-basis: 0%**: The starting size of the element is set to 0, allowing it to fully rely on available space.
+
+### Use Case:
+When used inside a flex container, it allows the element to take up all the remaining space, growing as much as possible.
+
+### Example:
+```html
+<div class="flex">
+  <div class="flex-1 bg-blue-500">This takes remaining space</div>
+  <div class="bg-red-500">This takes only the necessary space</div>
+</div>
+```
+
+In this example, the element with `flex-1` will grow to occupy any remaining space in the flex container.
