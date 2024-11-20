@@ -29,7 +29,7 @@ The Doctor Appointment Booking  is a user-friendly web application designed to s
 1. Clone the repository:  
    ```bash
    git clone https://github.com/vinnudev/Doctor-Appointment-Booking.git
-   cd your-repo-name
+   cd front-end
    ```
 2. Install dependencies:  
    ```bash
